@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlavorQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bse-UC-KZa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyH-wd-FTj">
+                                <rect key="frame" x="20" y="20" width="335" height="300"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Questions">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="164" translatesAutoresizingMaskIntoConstraints="NO" id="jy6-GF-h46">
+                                <rect key="frame" x="50" y="384" width="275" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMT-ne-JoZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="55.5" height="30"/>
+                                        <color key="backgroundColor" red="0.1040497863" green="0.63896534969999996" blue="0.1043162892" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="True">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pr7-Ii-IMl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Wk-vd-Y47">
+                                        <rect key="frame" x="219.5" y="0.0" width="55.5" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.32353152000000002" blue="0.28474499040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="False">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oil-Lt-94Z"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="137" translatesAutoresizingMaskIntoConstraints="NO" id="pHL-eL-KAr">
+                                <rect key="frame" x="50" y="530" width="295" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x / 15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlU-E9-L4e">
+                                        <rect key="frame" x="0.0" y="0.0" width="79" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fP-cT-Egr">
+                                        <rect key="frame" x="216" y="0.0" width="79" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Lua-nl-OaR">
+                                <rect key="frame" x="0.0" y="569" width="375" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.90101541809999997" blue="0.67662195260000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="9Nb-Vk-azj" firstAttribute="trailing" secondItem="pHL-eL-KAr" secondAttribute="trailing" constant="30" id="01q-Hb-top"/>
+                            <constraint firstItem="9Nb-Vk-azj" firstAttribute="trailing" secondItem="yyH-wd-FTj" secondAttribute="trailing" constant="20" id="5GE-qK-Hbw"/>
+                            <constraint firstItem="yyH-wd-FTj" firstAttribute="leading" secondItem="9Nb-Vk-azj" secondAttribute="leading" constant="20" id="KbZ-6J-J8v"/>
+                            <constraint firstItem="Lua-nl-OaR" firstAttribute="leading" secondItem="bse-UC-KZa" secondAttribute="leading" id="Nlt-EG-9lJ"/>
+                            <constraint firstItem="9Nb-Vk-azj" firstAttribute="trailing" secondItem="jy6-GF-h46" secondAttribute="trailing" constant="50" id="Qgs-A7-mes"/>
+                            <constraint firstItem="pHL-eL-KAr" firstAttribute="top" secondItem="bse-UC-KZa" secondAttribute="top" constant="530" id="R4O-33-GiI"/>
+                            <constraint firstItem="Lua-nl-OaR" firstAttribute="top" secondItem="pHL-eL-KAr" secondAttribute="bottom" constant="18.5" id="Skv-or-oZH"/>
+                            <constraint firstItem="9Nb-Vk-azj" firstAttribute="bottom" secondItem="Lua-nl-OaR" secondAttribute="bottom" constant="96" id="TVw-TZ-vmD"/>
+                            <constraint firstItem="jy6-GF-h46" firstAttribute="leading" secondItem="9Nb-Vk-azj" secondAttribute="leading" constant="50" id="XtY-RH-M4C"/>
+                            <constraint firstAttribute="trailing" secondItem="Lua-nl-OaR" secondAttribute="trailing" id="bl4-bJ-a2h"/>
+                            <constraint firstItem="pHL-eL-KAr" firstAttribute="leading" secondItem="9Nb-Vk-azj" secondAttribute="leading" constant="50" id="dzq-50-ckZ"/>
+                            <constraint firstItem="9Nb-Vk-azj" firstAttribute="bottom" secondItem="pHL-eL-KAr" secondAttribute="bottom" constant="116.5" id="eVe-Fu-6ub"/>
+                            <constraint firstItem="yyH-wd-FTj" firstAttribute="top" secondItem="9Nb-Vk-azj" secondAttribute="top" id="edz-cN-afm"/>
+                            <constraint firstItem="9Nb-Vk-azj" firstAttribute="bottom" secondItem="yyH-wd-FTj" secondAttribute="bottom" constant="347" id="jdA-ll-Qtw"/>
+                            <constraint firstItem="jy6-GF-h46" firstAttribute="top" secondItem="yyH-wd-FTj" secondAttribute="bottom" constant="64" id="yQQ-hl-hJm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9Nb-Vk-azj"/>
+                    </view>
+                    <connections>
+                        <outlet property="progressStatus" destination="VlU-E9-L4e" id="c5u-pt-rbP"/>
+                        <outlet property="progressView" destination="Lua-nl-OaR" id="nie-mk-rhT"/>
+                        <outlet property="questionText" destination="yyH-wd-FTj" id="077-rM-paz"/>
+                        <outlet property="score" destination="2fP-cT-Egr" id="88E-1R-cem"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="156" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+</document>
